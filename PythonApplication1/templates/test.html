@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Home Page</title>
+      </head>
+      <style type="text/css">
+      .picture {
+      max-height: 500px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+      }
+      .feedback {
+      margin: 5px;
+      }
+      .feedback_block {
+        margin: 0 auto;
+        width: 200px;
+      }
+      </style>
+      <body>
+        <h1 class="feedback_block">Do you like it?</h1>
+        <img class="picture" src="{{ look.img_url }}">
+        <div class="feedback_block">
+          <button class="feedback">Dislike 💩</button>
+          <button class="feedback">Like 👍</button>
+        </div>
+      </body>
+    </html>
