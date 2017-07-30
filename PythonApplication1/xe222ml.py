@@ -25,3 +25,5 @@ class DEBE:
         views = self.root.find("views")
         newView = ET.Element('view', {"user-id": user.get("id"), "image-id": str(image_id), "score": str(score)})
         views.append(newView)
+
+
