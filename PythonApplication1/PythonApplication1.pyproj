@@ -25,7 +25,7 @@
     <Compile Include="bot.py" />
     <Compile Include="scheme.py" />
     <Compile Include="parser.py" />
-    <Compile Include="xe222ml.py">
+    <Compile Include="storage.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -34,11 +34,9 @@
     <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\debe - Copy.xml" />
-    <Content Include="data\debe.xml">
-      <Publish>True</Publish>
-    </Content>
-    <Content Include="data\images.txt" />
+    <Content Include="data\views.xml" />
+    <Content Include="data\users.xml" />
+    <Content Include="data\albums.xml" />
     <Content Include="templates\test.html" />
   </ItemGroup>
   <PropertyGroup>
