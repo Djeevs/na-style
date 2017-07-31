@@ -23,21 +23,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="bot.py" />
-    <Compile Include="scheme.py" />
-    <Compile Include="parser.py" />
     <Compile Include="storage.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
-    <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\views.xml" />
     <Content Include="data\users.xml" />
     <Content Include="data\albums.xml" />
-    <Content Include="templates\test.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

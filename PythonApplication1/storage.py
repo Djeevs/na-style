@@ -17,7 +17,7 @@ class Storage:
     def getUser(self, id): 
         strid = str(id)
         for user in self.usersRoot:
-            if(user.get("id") == strid):
+            if user.get("id") == strid:
                 return user
         newUser = ET.Element("user", {"id": strid})
         self.usersRoot.append(newUser)
