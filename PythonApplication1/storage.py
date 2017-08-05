@@ -34,9 +34,6 @@ class Storage:
                     count += 1
             return count
 
-        
-        
-
         views = []
         for view in self.viewsRoot:
             if view.get("user-id") == user.get("id"):
@@ -46,8 +43,7 @@ class Storage:
         
 
         albumsCount = getCount(self.albumsRoot, lambda i : True)
-        albumsNeverViewedCount = getCount(self.albumsRoot, 
-                                          lambda a : a.get("id") not in viewsAlbums)
+        albumsNeverViewedCount = getCount(self.albumsRoot, lambda a : a.get("id") not in viewsAlbums)
 
         albumScores = []
         for album in self.albumsRoot:
@@ -86,11 +82,7 @@ class Storage:
         newView = ET.Element('view', {"user-id": user.get("id"), "image-id": image.get("id"), "album-id": album.get("id"), "score": str(score)})
         self.viewsRoot.append(newView)
 
-    
 
-    #def addView(self, user, image_id : int, score):
-    #    newView = ET.Element('view', {"user-id": user.get("id"), "image-id": str(image_id), "score": str(score)})
-    #    self.viewsRoot.append(newView)
 
 #db = Storage()
 #u = db.getUser(38051857)
