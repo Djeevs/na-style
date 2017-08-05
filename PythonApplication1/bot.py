@@ -34,17 +34,17 @@ def send_next_photo(bot, update):
     rm = ReplyKeyboardMarkup(variants)
     
     user = storage.getUser(chatId)
-
+    
     print('{0}:{1}'.format(input, chatId))
 
     def sendPhoto():
         image = storage.getImage(user)
         lastImage[chatId] = image
-        bot.sendPhoto(chatId, photo = image.text, reply_markup = rm)
+        bot.sendPhoto(chatId, photo = image[1].text, reply_markup = rm)
 
     def addView(score):
         if chatId in lastImage:
-            storage.addView(user, lastImage[chatId], score)
+            storage.addView(user, lastImage[chatId][0], lastImage[chatId][1], score)
 
     if input == '👦' or input == '👧':
         bot.sendMessage(chatId, text = "Ok, got it", reply_markup = rm)

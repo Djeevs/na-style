@@ -1,3 +1,54 @@
 <views>
-  <view image-id="567" score="1" user-id="1955061" />
-<view image-id="21731" score="1" user-id="38051857" /><view image-id="25819" score="1" user-id="38051857" /><view image-id="12033" score="1" user-id="38051857" /><view image-id="13802" score="1" user-id="38051857" /><view image-id="17250" score="-1" user-id="38051857" /><view image-id="13356" score="-1" user-id="38051857" /><view image-id="1820" score="-1" user-id="38051857" /></views>
+  <view album-id="244" image-id="15479" score="1" user-id="38051857" />
+  <view album-id="395" image-id="25521" score="1" user-id="38051857" />
+  <view album-id="395" image-id="25528" score="1" user-id="38051857" />
+  <view album-id="395" image-id="25519" score="1" user-id="38051857" />
+  <view album-id="113" image-id="7063" score="-1" user-id="1955061" />
+  <view album-id="362" image-id="23036" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15504" score="1" user-id="38051857" />
+  <view album-id="244" image-id="15535" score="-1" user-id="38051857" />
+  <view album-id="113" image-id="7115" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25513" score="-1" user-id="38051857" />
+  <view album-id="389" image-id="24786" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15518" score="-1" user-id="38051857" />
+  <view album-id="389" image-id="24774" score="-1" user-id="1955061" />
+  <view album-id="272" image-id="17543" score="-1" user-id="38051857" />
+  <view album-id="362" image-id="23004" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25524" score="1" user-id="38051857" />
+  <view album-id="113" image-id="7118" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25525" score="1" user-id="38051857" />
+  <view album-id="247" image-id="15682" score="-1" user-id="1955061" />
+  <view album-id="362" image-id="23035" score="-1" user-id="1955061" />
+  <view album-id="362" image-id="23048" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25517" score="1" user-id="38051857" />
+  <view album-id="352" image-id="22402" score="-1" user-id="1955061" />
+  <view album-id="389" image-id="24792" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15470" score="-1" user-id="38051857" />
+  <view album-id="395" image-id="25514" score="1" user-id="38051857" />
+  <view album-id="389" image-id="24792" score="-1" user-id="1955061" />
+  <view album-id="247" image-id="15683" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25520" score="-1" user-id="38051857" />
+  <view album-id="247" image-id="15684" score="-1" user-id="1955061" />
+  <view album-id="247" image-id="15680" score="-1" user-id="1955061" />
+  <view album-id="352" image-id="22431" score="-1" user-id="1955061" />
+  <view album-id="395" image-id="25520" score="-1" user-id="38051857" />
+  <view album-id="80" image-id="4424" score="1" user-id="1955061" />
+  <view album-id="80" image-id="4498" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15453" score="-1" user-id="38051857" />
+  <view album-id="297" image-id="18558" score="1" user-id="1955061" />
+  <view album-id="395" image-id="25515" score="-1" user-id="38051857" />
+  <view album-id="352" image-id="22405" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15515" score="1" user-id="38051857" />
+  <view album-id="297" image-id="18562" score="-1" user-id="1955061" />
+  <view album-id="244" image-id="15506" score="1" user-id="38051857" />
+  <view album-id="352" image-id="22398" score="-1" user-id="1955061" />
+  <view album-id="86" image-id="4927" score="1" user-id="38051857" />
+  <view album-id="244" image-id="15466" score="1" user-id="38051857" />
+  <view album-id="244" image-id="15488" score="1" user-id="38051857" />
+  <view album-id="80" image-id="4405" score="1" user-id="1955061" />
+  <view album-id="395" image-id="25527" score="-1" user-id="38051857" />
+  <view album-id="113" image-id="7094" score="-1" user-id="1955061" />
+  <view album-id="86" image-id="4932" score="-1" user-id="38051857" />
+  <view album-id="80" image-id="4495" score="-1" user-id="1955061" />
+  <view album-id="297" image-id="18579" score="-1" user-id="1955061" />
+</views>
