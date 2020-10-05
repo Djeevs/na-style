@@ -2,12 +2,11 @@ import sys
 import random
 import traceback
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
-from telegram import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove #InlineQueryResult
-from telegram.bot import Bot
 from telegram import *
-from storage import Storage
+from storage import *
 from threading import Thread
 from time import sleep
+import logging
 
 
 SEND_NEXT_PHOTO = range(1)
@@ -20,8 +19,8 @@ lastImage = {}
 
 rm = ReplyKeyboardMarkup( [['💩', '😍']], resize_keyboard = True)
 
-def show_error(bot, update, error):
-    print('Update "{}" caused error "{}"'.format(update, error))
+def show_error(bot, error):
+    print('Update "{}" caused error "{}"' + str(error.bot_data))
 
 def inputToString(input):
     if(input == '💩'):
@@ -39,25 +38,23 @@ def inputToScore(input):
     else:
         return 0
 
-def greet_user(bot , update):
+def greet_user(update, context):
     input = update.message.text
-    chatId = update.message.chat_id
-    print('{0} :> {1}'.format(chatId, inputToString(input)))  
+    chatId = update.effective_chat.id
+    print('{0} :> {1}'.format(chatId, inputToString(input)))
       
-    bot.sendMessage(chatId, text = "Сейчас покажу фотки стильных нигеров")
-
+    context.bot.send_message(chatId, text = "Check this look!")
     user = storage.getUser(chatId)
     image = storage.getImage(user)
     lastImage[chatId] = image
-    bot.sendPhoto(chatId, photo = image[1].text, reply_markup = rm)
-    print('{0} <: send photo {1}.{2}'.format(chatId, image[0].get("id"), image[1].get("id"))) 
+    context.bot.send_photo(chat_id=chatId, photo = image[1].text, reply_markup = rm)
+    print('{0} <: send photo {1}.{2}'.format(chatId, image[0].get("id"), image[1].get("id")))
 
     return SEND_NEXT_PHOTO
 
-
-def send_next_photo(bot, update):
+def send_next_photo(update, context):
     input = update.message.text
-    chatId = update.message.chat_id
+    chatId = update.effective_chat.id
     print('{0} :> {1}'.format(chatId, inputToString(input)))  
     
     user = storage.getUser(chatId)
@@ -69,14 +66,14 @@ def send_next_photo(bot, update):
     
     image = storage.getImage(user)
     lastImage[chatId] = image
-    bot.sendPhoto(chatId, photo = image[1].text, reply_markup = rm)
+    context.bot.send_photo(chatId, photo = image[1].text, reply_markup = rm)
     print('{0} <: send photo {1}.{2}'.format(chatId, image[0].get("id"), image[1].get("id")))  
 
     return SEND_NEXT_PHOTO
 
 
 def cancel(bot, update):
-    bot.sendMessage(update.message.chat_id, 'Пока! Возвращайся за луками нигеров!', reply_markup = ReplyKeyboardRemove())
+    bot.sendMessage(update.message.chat_id, 'Bye!', reply_markup = ReplyKeyboardRemove())
     return ConversationHandler.END
 
 def autoSaveThread():
@@ -94,7 +91,9 @@ def readConsoleThread():
 
 def telegramThread():
     print("bot thread started")
-    updater = Updater("361737979:AAE47wwOFxxKRsxPrAfuVUT7qljgSdR4rqM")
+    updater = Updater(token="361737979:AAE47wwOFxxKRsxPrAfuVUT7qljgSdR4rqM", use_context=True)
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                        level=logging.INFO)
     dp = updater.dispatcher
     conv_handler = ConversationHandler(
         entry_points = [CommandHandler('start', greet_user)],

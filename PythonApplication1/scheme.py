@@ -27,24 +27,6 @@ class DeBe:
 @app.route('/')
 @app.route('/index')
 @app.route('/user/<username>')
-def hello_world():
-    albom = Albom(1)
-    albom.add(Look(1,"http://i.imgur.com/EmFMZvu.jpg"))
-    albom.add(Look(2,"http://i.imgur.com/hTFDTz4.jpg"))
-    look = Look(3, "http://i.imgur.com/VG48nre.jpg")
-    albom.add(look)
-
-    albom = Albom(2)
-    albom.add(Look(1,"http://i.imgur.com/UPEIjYW.jpg"))
-    albom.add(Look(2,"http://i.imgur.com/hY1atQv.jpg"))
-    albom.add(Look(3,"http://i.imgur.com/fmpSvw6.jpg"))
-
-    albom = Albom(3)
-    albom.add(Look(1,"http://i.imgur.com/pUrKJ9v.jpg"))
-    albom.add(Look(2,"http://i.imgur.com/sHmWhY2.jpg"))
-    albom.add(Look(3,"http://i.imgur.com/vL1Iv83.jpg"))
-
-    return render_template("test.html", look = look)
 
 @app.route('/like/<id>')
 def like_look():
